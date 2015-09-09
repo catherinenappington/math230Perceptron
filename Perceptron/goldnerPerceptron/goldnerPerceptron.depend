@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1441404771 source:c:\users\ian\c\perceptron\goldnerperceptron\main.c
+	<stdio.h>
+	<stdlib.h>
+
