@@ -7,6 +7,7 @@
 double dot_product(int[], double[]);
 void update_weights(double*, double, int[]);
 
+
 int main(int argc, char * argv[])
 {
     double weights[3];
@@ -17,7 +18,7 @@ int main(int argc, char * argv[])
         weights[2] = *argv[3];
     }
     else
-        weights[] = {0, 0, 0};
+        weights[0] = weights[1] = weights[2] = 0;
     int i, j, error, error_count = 1;
     int training_set[4][3] = { {1, 0, 0}, {1, 0, 1}, {1, 1, 0}, {1, 1, 1} };
     int desired_output[] = {1, 1, 1, 0};
