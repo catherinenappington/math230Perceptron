@@ -7,14 +7,20 @@
 double dot_product(int[], double[]);
 void update_weights(double*, double, int[]);
 
-int main()
+
+int main(int argc, char * argv[])
 {
+    double weights[3];
+    if(argc == 3)
+    {
+        weights[0] = *argv[1];
+        weights[1] = *argv[2];
+        weights[2] = *argv[3];
+    }
+    else
+        weights[0] = weights[1] = weights[2] = 0;
     int i, j, error, error_count = 1;
-    double weights[] = {0, 0, 0};
-    int training_set[4][3] = { {1, 0, 0},
-                          {1, 0, 1},
-                          {1, 1, 0},
-                          {1, 1, 1} };
+    int training_set[4][3] = { {1, 0, 0}, {1, 0, 1}, {1, 1, 0}, {1, 1, 1} };
     int desired_output[] = {1, 1, 1, 0};
 
     for(i = 0; error_count != 0; i++)
@@ -29,7 +35,7 @@ int main()
                 error_count++;
 
             update_weights(weights, (learning_rate * error), training_set[j]);
-            printf("%.1f %.1f %.1f\t Correction = %.5f\n", weights[0], weights[1], weights[2], (error * learning_rate));
+            printf("%.1f %.1f %.1f\t iteration error = %.5f\n", weights[0], weights[1], weights[2], (error_count / 4));
         }
     }
     return 0;
