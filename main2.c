@@ -35,7 +35,7 @@ int main(int argc, char * argv[])
                 error_count++;
 
             update_weights(weights, (learning_rate * error), training_set[j]);
-            printf("%.1f %.1f %.1f\t Correction = %.5f\n", weights[0], weights[1], weights[2], (error * learning_rate));
+            printf("%.1f %.1f %.1f\t iteration error = %.5f\n", weights[0], weights[1], weights[2], (error_count / 4));
         }
     }
     return 0;
