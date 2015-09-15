@@ -11,10 +11,7 @@ int main()
 {
     int i, j, error, error_count = 1;
     double weights[] = {0, 0, 0};
-    int training_set[4][3] = { {1, 0, 0},
-                          {1, 0, 1},
-                          {1, 1, 0},
-                          {1, 1, 1} };
+    int training_set[4][3] = { {1, 0, 0}, {1, 0, 1}, {1, 1, 0}, {1, 1, 1} };
     int desired_output[] = {1, 1, 1, 0};
 
     for(i = 0; error_count != 0; i++)
